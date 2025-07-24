@@ -22,9 +22,11 @@ function describeTemperature(fahrenheit){
 const fahrenheit = prompt("Enter a Temperature in Fahrenheit");
 
 
-if (fahrenheit) {
+if (!isNaN(fahrenheit)) {
     const celsius = convertToCelsius(fahrenheit);
     const description = describeTemperature(fahrenheit);
 
-    alert("That is " + celsius + "°C - its " + description);
-}   else if (NaN) alert("Thats not a number hoe")
+    alert("That is " + Math.floor(celsius) + "°C - its " + description);
+}   else {
+    alert("Thats not a number stupid");
+}
